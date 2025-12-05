@@ -1,8 +1,2090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>California Smile Studio | Modern Dental Clinic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* --------------
+       CSS RESET
+    -------------- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        sans-serif;
+      background-color: #f6f7fb;
+      color: #111827;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* --------------
+       DESIGN TOKENS
+    -------------- */
+    :root {
+      --page-bg: #f6f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f0f3fa;
+      --border-subtle: #e2e8f0;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --brand: #2b80ff;
+      --brand-soft: #e3efff;
+      --accent-gold: #d4b07b;
+      --danger: #e11d48;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+      --container: 1120px;
+      --nav-height: 72px;
+      --transition-fast: 200ms ease-out;
+      --transition-med: 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    /* --------------
+       GLOBAL LAYOUT
+    -------------- */
+    .page {
+      background: radial-gradient(
+        circle at top left,
+        #e0ebff 0,
+        #f6f7fb 35%,
+        #eef2ff 100%
+      );
+      color: var(--text-main);
+    }
+
+    .shell {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 1.4rem;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 2.5rem;
+      text-align: left;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      font-weight: 600;
+    }
+
+    .section-eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--brand), rgba(43, 128, 255, 0));
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.85rem;
+      line-height: 1.2;
+      margin-top: 0.75rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      max-width: 32rem;
+      font-size: 0.97rem;
+    }
+
+    /* --------------
+       NAVIGATION
+    -------------- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(246, 247, 251, 0.96),
+        rgba(246, 247, 251, 0.85)
+      );
+      border-bottom: 1px solid rgba(226, 232, 240, 0.4);
+    }
+
+    .nav-inner {
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .nav-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 210deg,
+        #2b80ff,
+        #d4b07b,
+        #38bdf8,
+        #2b80ff
+      );
+      padding: 2px;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+    }
+
+    .nav-logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      color: var(--brand);
+    }
+
+    .nav-text-main {
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    .nav-text-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.2rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--brand), var(--accent-gold));
+      transition: width var(--transition-med);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: none;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .nav-pill {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(231, 243, 255, 0.9);
+      color: var(--brand);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .nav-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #34d399;
+      box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.25);
+    }
+
+    .nav-toggle {
+      width: 38px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-toggle-lines {
+      width: 18px;
+      height: 12px;
+      position: relative;
+    }
+
+    .nav-toggle-lines span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1.5px;
+      border-radius: 999px;
+      background: #0f172a;
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+    }
+
+    .nav-toggle-lines span:nth-child(1) {
+      top: 0;
+    }
+
+    .nav-toggle-lines span:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nav-toggle-lines span:nth-child(3) {
+      bottom: 0;
+    }
+
+    .nav-mobile-menu {
+      display: none;
+    }
+
+    /* --------------
+       BUTTONS
+    -------------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.7rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast),
+        background-color var(--transition-fast),
+        color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: radial-gradient(
+        circle at 0 0,
+        #93c5fd 0,
+        #2563eb 32%,
+        #1d4ed8 70%
+      );
+      color: #f9fafb;
+      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-primary::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.38),
+        transparent 55%
+      );
+      transform: translateX(-120%);
+      transition: transform 360ms ease-out;
+    }
+
+    .btn-primary:hover::after {
+      transform: translateX(0%);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(148, 163, 184, 0.45);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: var(--surface);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.14);
+      border-color: rgba(148, 163, 184, 0.7);
+    }
+
+    .btn-pill {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(248, 250, 252, 0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      background: rgba(15, 23, 42, 0.1);
+    }
+
+    /* --------------
+       HERO
+    -------------- */
+    .hero {
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.07);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.3);
+    }
+
+    .hero-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 2.05rem;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.9rem;
+      color: #020617;
+    }
+
+    .hero-heading span {
+      background: linear-gradient(120deg, #2563eb, #d4b07b);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 30rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      margin-top: 1.6rem;
+    }
+
+    .hero-metric {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      min-width: 5.5rem;
+    }
+
+    .hero-metric-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .hero-metric-value {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .hero-note {
+      margin-top: 1.1rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-note-pill {
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.08);
+      color: #15803d;
+      font-weight: 500;
+      font-size: 0.7rem;
+    }
+
+    /* HERO VISUAL */
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      position: relative;
+      background: radial-gradient(
+        circle at 0 0,
+        #e0f2fe 0,
+        #ffffff 38%,
+        #e5e7eb 100%
+      );
+      border-radius: 30px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #f9fafb;
+      font-size: 0.75rem;
+      position: absolute;
+      top: 1.4rem;
+      left: 1.4rem;
+    }
+
+    .hero-card-tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-card-main {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+    }
+
+    .hero-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 160deg,
+        #60a5fa,
+        #d4b07b,
+        #38bdf8,
+        #60a5fa
+      );
+      padding: 3px;
+      flex-shrink: 0;
+    }
+
+    .hero-avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 1.6rem;
+      color: #0f172a;
+    }
+
+    .hero-card-text h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      margin: 0 0 0.25rem;
+      color: #020617;
+    }
+
+    .hero-card-text p {
+      margin: 0;
+      font-size: 0.82rem;
+      color: #4b5563;
+    }
+
+    .hero-card-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
+    }
+
+    .hero-card-pill {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 0.7rem;
+      color: #111827;
+    }
+
+    .hero-floating {
+      margin-top: 1.4rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .hero-floating-card {
+      border-radius: 18px;
+      padding: 0.9rem 0.95rem;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      font-size: 0.8rem;
+    }
+
+    .hero-floating-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .hero-floating-value {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: -18%;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    .hero-orbit::before {
+      content: "";
+      position: absolute;
+      inset: 18%;
+      border-radius: 999px;
+      border: 1px dashed rgba(59, 130, 246, 0.35);
+    }
+
+    .hero-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 32%;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+    }
+
+    /* --------------
+       ABOUT
+    -------------- */
+    .about {
+      padding-top: 0;
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    .about-featured {
+      background: var(--surface);
+      border-radius: var(--radius-xl);
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.07);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+    }
+
+    .about-featured-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .about-featured-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.05rem;
+    }
+
+    .about-featured-tag {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(234, 179, 8, 0.06);
+      color: #92400e;
+      font-size: 0.75rem;
+      border: 1px solid rgba(234, 179, 8, 0.4);
+      white-space: nowrap;
+    }
+
+    .about-featured-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .stat-card {
+      background: var(--surface-soft);
+      border-radius: var(--radius-lg);
+      padding: 0.9rem;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .stat-caption {
+      font-size: 0.75rem;
+      color: #4b5563;
+    }
+
+    .about-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .about-item {
+      display: flex;
+      gap: 0.7rem;
+    }
+
+    .about-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--brand);
+      flex-shrink: 0;
+    }
+
+    .about-item-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .about-item-text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* --------------
+       SERVICES
+    -------------- */
+    .services {
+      background: #f0f3fa;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.1rem;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.1rem;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+      position: relative;
+      overflow: hidden;
+      transition:
+        transform var(--transition-med),
+        box-shadow var(--transition-med),
+        border-color var(--transition-med);
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 0 0,
+        rgba(59, 130, 246, 0.12),
+        transparent 55%
+      );
+      opacity: 0;
+      transition: opacity var(--transition-med);
+      pointer-events: none;
+    }
+
+    .service-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 14px;
+      background: rgba(37, 99, 235, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .service-title {
+      font-weight: 600;
+      font-size: 0.98rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .service-text {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .service-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .service-chip {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.72rem;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+      border-color: rgba(59, 130, 246, 0.55);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    /* --------------
+       TESTIMONIALS
+    -------------- */
+    .testimonials {
+      background: #f6f7fb;
+    }
+
+    .testimonials-shell {
+      position: relative;
+    }
+
+    .testimonials input[type="radio"] {
+      display: none;
+    }
+
+    .testimonial-slider {
+      position: relative;
+      background: var(--surface);
+      border-radius: var(--radius-xl);
+      padding: 1.7rem 1.5rem 2.2rem;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      overflow: hidden;
+    }
+
+    .testimonial-slides {
+      position: relative;
+      min-height: 150px;
+    }
+
+    .testimonial-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(18px);
+      transition:
+        opacity var(--transition-med),
+        transform var(--transition-med);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.9rem;
+      color: #111827;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 1.4rem;
+    }
+
+    .testimonial-text::before {
+      content: "“";
+      font-family: "Playfair Display", serif;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: rgba(37, 99, 235, 0.18);
+      position: absolute;
+      top: -0.3rem;
+      left: 0;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      margin-top: 0.9rem;
+    }
+
+    .testimonial-author-main {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: #e5e7eb;
+    }
+
+    .testimonial-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .testimonial-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .testimonial-location {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .testimonial-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.8rem;
+      color: #f59e0b;
+      white-space: nowrap;
+    }
+
+    .testimonial-rating span {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .testimonial-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+
+    .testimonial-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      transition:
+        transform var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        width var(--transition-fast);
+    }
+
+    /* radio → slide visible */
+    #t-1:checked ~ .testimonial-slider .slide-1,
+    #t-2:checked ~ .testimonial-slider .slide-2,
+    #t-3:checked ~ .testimonial-slider .slide-3 {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+      position: relative;
+    }
+
+    /* radio → dot active */
+    #t-1:checked ~ .testimonial-slider .dots-1,
+    #t-2:checked ~ .testimonial-slider .dots-2,
+    #t-3:checked ~ .testimonial-slider .dots-3 {
+      width: 18px;
+      background: var(--brand);
+      border-color: transparent;
+      transform: translateY(-1px);
+    }
+
+    /* --------------
+       DOCTOR BIO
+    -------------- */
+    .doctor-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .doctor-photo-wrap {
+      position: relative;
+    }
+
+    .doctor-photo-card {
+      border-radius: 32px;
+      background: linear-gradient(160deg, #e0f2fe, #fefce8);
+      padding: 0.9rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .doctor-photo {
+      border-radius: 24px;
+      background: #e5e7eb;
+      aspect-ratio: 3 / 4;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .doctor-badge-floating {
+      position: absolute;
+      right: 1.2rem;
+      bottom: 1.2rem;
+      background: rgba(15, 23, 42, 0.92);
+      color: #f9fafb;
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .doctor-badge-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    .doctor-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .doctor-role {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .doctor-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+      max-width: 34rem;
+    }
+
+    .doctor-cert-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .doctor-cert {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      font-size: 0.8rem;
+    }
+
+    .doctor-cert-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent-gold);
+      margin-top: 0.25rem;
+    }
+
+    .doctor-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .doctor-note span {
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      font-size: 0.7rem;
+      color: var(--brand);
+      font-weight: 500;
+    }
+
+    /* --------------
+       CONTACT + MAP
+    -------------- */
+    .contact {
+      background: #f0f3fa;
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border-radius: var(--radius-xl);
+      padding: 1.6rem 1.4rem;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.07);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.83rem;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #0f172a;
+    }
+
+    .form-input,
+    .form-textarea {
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      padding: 0.65rem 0.75rem;
+      background: #ffffff;
+      transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background-color var(--transition-fast);
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: var(--brand);
+      box-shadow:
+        0 0 0 1px rgba(37, 99, 235, 0.35),
+        0 10px 25px rgba(37, 99, 235, 0.18);
+      background: #ffffff;
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .form-footnote {
+      margin-top: 0.8rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .contact-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .contact-meta strong {
+      color: #020617;
+    }
+
+    .map-wrap {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+      min-height: 260px;
+      background: #e5e7eb;
+    }
+
+    .map-embed {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* --------------
+       FOOTER
+    -------------- */
+    .footer {
+      background: #020617;
+      color: #e5e7eb;
+      padding: 2.4rem 0 1.6rem;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      gap: 2rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      max-width: 18rem;
+    }
+
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .footer-logo-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 210deg,
+        #2b80ff,
+        #d4b07b,
+        #38bdf8,
+        #2b80ff
+      );
+      padding: 2px;
+    }
+
+    .footer-logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      color: #e5e7eb;
+    }
+
+    .footer-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .footer-sub {
+      color: #9ca3af;
+    }
+
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    .footer-col-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-bottom: 0.55rem;
+    }
+
+    .footer-hours {
+      display: grid;
+      row-gap: 0.18rem;
+    }
+
+    .footer-hours-row {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .footer-hours-row span:first-child {
+      white-space: nowrap;
+      color: #9ca3af;
+    }
+
+    .footer-hours-row span:last-child {
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .footer-contacts,
+    .footer-social {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 0.7rem;
+      margin-top: 0.2rem;
+    }
+
+    .social-pill {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+    }
+
+    .social-pill:hover {
+      background: #e5e7eb;
+      color: #020617;
+      border-color: transparent;
+      transform: translateY(-1px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(31, 41, 55, 1);
+      margin-top: 1.8rem;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.8rem;
+      color: #6b7280;
+      font-size: 0.78rem;
+      flex-wrap: wrap;
+    }
+
+    /* --------------
+       MICRO-ANIMATIONS
+    -------------- */
+    @keyframes fade-up-soft {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fade-up-soft 620ms var(--transition-med) both;
+    }
+
+    .delay-1 {
+      animation-delay: 80ms;
+    }
+    .delay-2 {
+      animation-delay: 160ms;
+    }
+    .delay-3 {
+      animation-delay: 240ms;
+    }
+    .delay-4 {
+      animation-delay: 320ms;
+    }
+
+    /* --------------
+       RESPONSIVE
+    -------------- */
+    @media (min-width: 640px) {
+      .hero-heading {
+        font-size: 2.4rem;
+      }
+
+      .hero-inner {
+        gap: 3rem;
+      }
+
+      .testimonial-slider {
+        padding: 2rem 1.8rem 2.6rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 4.5rem 0;
+      }
+
+      .nav-links {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: flex;
+      }
+
+      .nav-toggle,
+      .nav-mobile-menu {
+        display: none;
+      }
+
+      .hero-inner {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        align-items: center;
+      }
+
+      .hero {
+        padding-top: 4rem;
+        padding-bottom: 4.5rem;
+      }
+
+      .about-inner {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .doctor-inner {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      }
+
+      .doctor-inner {
+        direction: rtl;
+      }
+
+      .doctor-content {
+        direction: ltr;
+      }
+
+      .contact-inner {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      }
+
+      .form-row-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-inner {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      }
+
+      .footer-cols {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-heading {
+        font-size: 2.9rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .hero-card {
+        padding: 2rem 1.7rem;
+      }
+
+      .hero-floating-card {
+        padding: 1.05rem 1.1rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-cols {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .footer-cols {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-hours-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-hours-row span:last-child {
+        text-align: left;
+        white-space: normal;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="page">
+  <!-- NAV -->
+  <header class="nav">
+    <div class="shell">
+      <div class="nav-inner">
+        <div class="nav-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-inner">C</div>
+          </div>
+          <div>
+            <div class="nav-text-main">California Smile Studio</div>
+            <div class="nav-text-sub">Cosmetic &amp; family dentistry in LA</div>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Treatments</a>
+          <a href="#testimonials">Patients</a>
+          <a href="#doctor">Doctor</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <div class="nav-pill">
+            <span class="nav-pill-dot"></span>
+            <span>New patients welcome</span>
+          </div>
+          <button class="btn btn-primary btn-pill">
+            Book a visit
+            <span class="btn-icon">→</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <div class="nav-toggle-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="shell">
+        <div class="hero-inner">
+          <div class="hero-copy animate-in delay-1">
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              <span>Premium cosmetic &amp; family care in Los Angeles</span>
+            </div>
+            <h1 class="hero-heading">
+              A calmer way to visit the
+              <span>dentist in California.</span>
+            </h1>
+            <p class="hero-subtitle">
+              California Smile Studio blends spa-like comfort with advanced
+              cosmetic dentistry — so your family can feel relaxed, heard, and
+              proud of every smile.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary">
+                Book a new patient visit
+                <span class="btn-icon">↗</span>
+              </button>
+              <button class="btn btn-outline">
+                Call (310) 555-0192
+              </button>
+            </div>
+
+            <div class="hero-note">
+              <span class="hero-note-pill">Same-week appointments</span>
+              <span>Flexible early-morning and evening hours available.</span>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="hero-metric">
+                <span class="hero-metric-label">Patient rating</span>
+                <span class="hero-metric-value">4.9 / 5.0</span>
+              </div>
+              <div class="hero-metric">
+                <span class="hero-metric-label">Years in practice</span>
+                <span class="hero-metric-value">12+</span>
+              </div>
+              <div class="hero-metric">
+                <span class="hero-metric-label">Smile makeovers</span>
+                <span class="hero-metric-value">800+</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual animate-in delay-2">
+            <div class="hero-card">
+              <div class="hero-card-tag">
+                <span class="hero-card-tag-dot"></span>
+                <span>Comfort-first care for anxious patients</span>
+              </div>
+
+              <div class="hero-card-main">
+                <div class="hero-avatar">
+                  <div class="hero-avatar-inner">D</div>
+                </div>
+                <div class="hero-card-text">
+                  <h2>Dr. Maya Collins</h2>
+                  <p>Cosmetic &amp; family dentist specializing in smile makeovers and gentle care.</p>
+                  <div class="hero-card-pills">
+                    <span class="hero-card-pill">Invisalign®</span>
+                    <span class="hero-card-pill">Porcelain veneers</span>
+                    <span class="hero-card-pill">Whitening</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-floating">
+                <div class="hero-floating-card">
+                  <div class="hero-floating-label">Same-day whitening</div>
+                  <div class="hero-floating-value">Up to 8 shades brighter</div>
+                </div>
+                <div class="hero-floating-card">
+                  <div class="hero-floating-label">Membership plan</div>
+                  <div class="hero-floating-value">From $39 / month</div>
+                </div>
+              </div>
+
+              <div class="hero-orbit"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+      <div class="shell">
+        <div class="about-inner">
+          <div class="about-copy animate-in delay-1">
+            <header class="section-header">
+              <div class="section-eyebrow">Why patients choose us</div>
+              <h2 class="section-title">A clinic designed around calmer dental visits.</h2>
+              <p class="section-subtitle">
+                From aromatherapy and noise-canceling headphones to longer appointment
+                times, every detail is curated to help you actually relax in the chair.
+              </p>
+            </header>
+
+            <div class="about-featured">
+              <div class="about-featured-header">
+                <div>
+                  <div class="about-featured-title">Comfort, clarity, and no surprise fees.</div>
+                </div>
+                <div class="about-featured-tag">Transparent treatment plans</div>
+              </div>
+              <p class="about-featured-text">
+                You’ll always see your options, fees, and timeline in writing — before we
+                start any treatment. Our team walks you through every step so you feel
+                confident, not rushed.
+              </p>
+
+              <div class="about-grid">
+                <div class="stat-card">
+                  <div class="stat-label">Average wait time</div>
+                  <div class="stat-value">Under 5 min</div>
+                  <div class="stat-caption">We never overbook your slot.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Emergency visits</div>
+                  <div class="stat-value">Same-day</div>
+                  <div class="stat-caption">Reserved times for urgent care.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Insurance</div>
+                  <div class="stat-value">Most PPO</div>
+                  <div class="stat-caption">Plus in-house membership plan.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Sedation options</div>
+                  <div class="stat-value">3 levels</div>
+                  <div class="stat-caption">Tailored for anxious patients.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-list-wrap animate-in delay-2">
+            <div class="about-list">
+              <div class="about-item">
+                <div class="about-icon">🌿</div>
+                <div>
+                  <div class="about-item-title">Spa-like calming environment</div>
+                  <div class="about-item-text">
+                    Scented towels, warm blankets, and a quiet, modern lounge designed to feel more like a spa than a clinic.
+                  </div>
+                </div>
+              </div>
+              <div class="about-item">
+                <div class="about-icon">🎧</div>
+                <div>
+                  <div class="about-item-title">Comfort menu at every visit</div>
+                  <div class="about-item-text">
+                    Choose from noise-canceling headphones, streaming shows, stress balls, and more to customize your appointment.
+                  </div>
+                </div>
+              </div>
+              <div class="about-item">
+                <div class="about-icon">💬</div>
+                <div>
+                  <div class="about-item-title">We explain everything in plain English</div>
+                  <div class="about-item-text">
+                    No jargon, no pressure. Just a clear conversation about what’s going on and what your options are.
+                  </div>
+                </div>
+              </div>
+              <div class="about-item">
+                <div class="about-icon">🧾</div>
+                <div>
+                  <div class="about-item-title">Upfront pricing &amp; payment plans</div>
+                  <div class="about-item-text">
+                    We’ll help you maximize benefits, estimate out-of-pocket costs, and spread payments comfortably over time.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services section">
+      <div class="shell">
+        <header class="section-header">
+          <div class="section-eyebrow">Treatments</div>
+          <h2 class="section-title">Everything your smile needs, under one roof.</h2>
+          <p class="section-subtitle">
+            From quick whitening before an event to full-mouth smile makeovers, we create
+            treatment plans tailored to your goals, timeline, and budget.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card animate-in delay-1">
+            <div class="service-icon">✨</div>
+            <h3 class="service-title">Cosmetic smile design</h3>
+            <p class="service-text">
+              Porcelain veneers, bonding, and contouring to reshape your smile with
+              natural-looking results — never “too fake” or overdone.
+            </p>
+            <div class="service-meta">
+              <span class="service-chip">Ideal for: smile makeovers</span>
+              <span>Avg. 2–3 visits</span>
+            </div>
+          </article>
+
+          <article class="service-card animate-in delay-2">
+            <div class="service-icon">🦷</div>
+            <h3 class="service-title">Invisalign® clear aligners</h3>
+            <p class="service-text">
+              Straighten your teeth with nearly invisible trays, designed around your
+              work and social life. Virtual check-ins available.
+            </p>
+            <div class="service-meta">
+              <span class="service-chip">Payment plans available</span>
+              <span>6–18 months</span>
+            </div>
+          </article>
+
+          <article class="service-card animate-in delay-3">
+            <div class="service-icon">☀️</div>
+            <h3 class="service-title">Professional whitening</h3>
+            <p class="service-text">
+              In-office and take-home options that lift deep stains while protecting
+              sensitivity, perfect before weddings, photos, or events.
+            </p>
+            <div class="service-meta">
+              <span class="service-chip">Up to 8 shades brighter</span>
+              <span>One visit</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials section">
+      <div class="shell testimonials-shell">
+        <input type="radio" name="t-slider" id="t-1" checked />
+        <input type="radio" name="t-slider" id="t-2" />
+        <input type="radio" name="t-slider" id="t-3" />
+
+        <header class="section-header">
+          <div class="section-eyebrow">Patient stories</div>
+          <h2 class="section-title">“I finally stopped dreading the dentist.”</h2>
+          <p class="section-subtitle">
+            Our patients come to us with anxiety, past bad experiences, and big goals. Here’s what
+            they say after switching to California Smile Studio.
+          </p>
+        </header>
+
+        <div class="testimonial-slider">
+          <div class="testimonial-slides">
+            <article class="testimonial-slide slide-1">
+              <p class="testimonial-text">
+                I used to cancel dental appointments for years at a time. Dr. Collins and her team
+                completely changed that. They explained every step, checked in constantly, and I
+                actually felt relaxed during my root canal — I didn’t think that was possible.
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-main">
+                  <div class="testimonial-avatar"></div>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-name">Alex M.</div>
+                    <div class="testimonial-location">Santa Monica, CA</div>
+                  </div>
+                </div>
+                <div class="testimonial-rating">
+                  ★★★★★
+                  <span>4.9 average on Google</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-slide slide-2">
+              <p class="testimonial-text">
+                I wanted veneers but was terrified they’d look fake. Dr. Collins walked me through
+                different shapes and shades, mocked everything up digitally, and didn’t start until I
+                loved the preview. The final result is so natural that people just say I look ‘more
+                rested’.
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-main">
+                  <div class="testimonial-avatar"></div>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-name">Lauren G.</div>
+                    <div class="testimonial-location">Los Angeles, CA</div>
+                  </div>
+                </div>
+                <div class="testimonial-rating">
+                  ★★★★★
+                  <span>Cosmetic smile makeover</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-slide slide-3">
+              <p class="testimonial-text">
+                Our kids actually ask when we’re going back. The waiting area has books, tablets,
+                and everyone talks to them like little adults. Cleanings are quick, gentle, and
+                they explain to us exactly how their teeth are developing.
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-main">
+                  <div class="testimonial-avatar"></div>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-name">The Ramirez family</div>
+                    <div class="testimonial-location">Culver City, CA</div>
+                  </div>
+                </div>
+                <div class="testimonial-rating">
+                  ★★★★★
+                  <span>Family dentistry</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="testimonial-dots">
+            <label class="testimonial-dot dots-1" for="t-1"></label>
+            <label class="testimonial-dot dots-2" for="t-2"></label>
+            <label class="testimonial-dot dots-3" for="t-3"></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCTOR -->
+    <section id="doctor" class="section">
+      <div class="shell">
+        <div class="doctor-inner">
+          <div class="doctor-content animate-in delay-1">
+            <header class="section-header">
+              <div class="section-eyebrow">Meet your dentist</div>
+              <h2 class="section-title">Hi, I’m Dr. Maya Collins.</h2>
+              <p class="section-subtitle">
+                I started California Smile Studio to create the kind of dental experience I wished existed
+                for my own family — slower, kinder, and fully transparent.
+              </p>
+            </header>
+
+            <p class="doctor-text">
+              I completed my DDS at UCLA School of Dentistry, followed by advanced training in cosmetic
+              dentistry, Invisalign®, and full-mouth rehabilitation. Over the last 12+ years I’ve helped
+              hundreds of patients move from “I hate the dentist” to genuinely loving their smiles.
+            </p>
+
+            <div class="doctor-cert-list">
+              <div class="doctor-cert">
+                <div class="doctor-cert-dot"></div>
+                <div>UCLA School of Dentistry — DDS, with honors.</div>
+              </div>
+              <div class="doctor-cert">
+                <div class="doctor-cert-dot"></div>
+                <div>Member, American Academy of Cosmetic Dentistry (AACD).</div>
+              </div>
+              <div class="doctor-cert">
+                <div class="doctor-cert-dot"></div>
+                <div>Certified Invisalign® provider with 300+ completed cases.</div>
+              </div>
+              <div class="doctor-cert">
+                <div class="doctor-cert-dot"></div>
+                <div>Advanced training in sedation dentistry for anxious patients.</div>
+              </div>
+            </div>
+
+            <div class="doctor-note">
+              <span>We listen first.</span>
+              <span>You’ll never feel rushed into a treatment plan. We’ll co-design it together.</span>
+            </div>
+          </div>
+
+          <div class="doctor-photo-wrap animate-in delay-2">
+            <div class="doctor-photo-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-badge-floating">
+                <div class="doctor-badge-icon">🏆</div>
+                <span>Top Dentist in LA • 5 years running</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section">
+      <div class="shell">
+        <div class="contact-inner">
+          <div class="contact-card animate-in delay-1">
+            <header class="section-header">
+              <div class="section-eyebrow">Book a visit</div>
+              <h2 class="section-title">Tell us how we can help.</h2>
+              <p class="section-subtitle">
+                Share a bit about your goals or concerns and our front desk team will reach out
+                within one business day to coordinate your visit.
+              </p>
+            </header>
+
+            <form class="form-grid">
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label class="form-label" for="name">Full name</label>
+                  <input class="form-input" id="name" type="text" placeholder="Alex Johnson" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="phone">Phone number</label>
+                  <input class="form-input" id="phone" type="tel" placeholder="(310) 555-0192" />
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label class="form-label" for="email">Email address</label>
+                  <input class="form-input" id="email" type="email" placeholder="you@example.com" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="service">What are you interested in?</label>
+                  <input class="form-input" id="service" type="text" placeholder="Invisalign, whitening, check-up..." />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="message">Anything else we should know?</label>
+                <textarea class="form-textarea" id="message" placeholder="Tell us about your goals, timeline, or concerns."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Request an appointment
+                <span class="btn-icon">→</span>
+              </button>
+
+              <p class="form-footnote">
+                By submitting this form, you agree to be contacted by our team via phone or email.
+                We never share your information with third parties.
+              </p>
+            </form>
+
+            <div class="contact-meta">
+              <div><strong>Phone:</strong> (310) 555-0192</div>
+              <div><strong>Email:</strong> hello@californiasmilestudio.com</div>
+              <div><strong>Address:</strong> 1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90025</div>
+            </div>
+          </div>
+
+          <div class="map-wrap animate-in delay-2">
+            <!-- Placeholder map embed -->
+            <iframe
+              class="map-embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.907220829645!2d-118.26060898478427!3d34.05223428060932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7b9d1b0bfff%3A0x4a5b0a9f3b2c5ab!2sLos%20Angeles%20Dental%20Clinic!5e0!3m2!1sen!2sus!4v1700000000000"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Map to California Smile Studio"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="shell">
       <div class="footer-inner">
-        <!-- Brand block -->
         <div class="footer-brand">
           <div class="footer-logo">
             <div class="footer-logo-badge">
@@ -10,17 +2092,12 @@
             </div>
             <div>
               <div class="footer-title">California Smile Studio</div>
-              <div class="footer-sub">
-                Modern cosmetic &amp; family dentistry in<br />
-                Los Angeles, CA.
-              </div>
+              <div class="footer-sub">Modern cosmetic &amp; family dentistry in Los Angeles, CA.</div>
             </div>
           </div>
         </div>
 
-        <!-- Columns -->
         <div class="footer-cols">
-          <!-- Opening hours -->
           <div>
             <div class="footer-col-title">Opening hours</div>
             <div class="footer-hours">
@@ -43,20 +2120,15 @@
             </div>
           </div>
 
-          <!-- Contact -->
           <div>
             <div class="footer-col-title">Contact</div>
             <div class="footer-contacts">
               <span>(310) 555-0192</span>
-              <span class="footer-email">hello@californiasmilestudio.com</span>
-              <span>
-                1234 Wilshire Blvd, Suite 500<br />
-                Los Angeles, CA 90025
-              </span>
+              <span>hello@californiasmilestudio.com</span>
+              <span>1234 Wilshire Blvd, Suite 500<br />Los Angeles, CA 90025</span>
             </div>
           </div>
 
-          <!-- Social -->
           <div>
             <div class="footer-col-title">Connect</div>
             <div class="footer-social">
@@ -71,14 +2143,12 @@
         </div>
       </div>
 
-      <!-- Bottom line -->
       <div class="footer-bottom">
-        <span>© 2025 California Smile Studio. All rights reserved.</span>
-        <span>
-          This website is a demo created by Evida Studio for portfolio purposes only
-          and does not represent an actual dental clinic.
-        </span>
+        <span>© <span id="year">2025</span> California Smile Studio. All rights reserved.</span>
+        <span>This website is a demo created by Evida Studio for portfolio purposes only and does not represent an actual dental clinic.</span>
         <span>Design &amp; code by Evida Studio.</span>
       </div>
     </div>
   </footer>
+</body>
+</html>
