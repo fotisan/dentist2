@@ -837,7 +837,6 @@
       position: relative;
     }
 
-    /* Radio controls (hidden) */
     .testimonials input[type="radio"] {
       display: none;
     }
@@ -876,6 +875,8 @@
       font-size: 0.9rem;
       color: #111827;
       line-height: 1.6;
+      position: relative;
+      padding-left: 1.4rem;
     }
 
     .testimonial-text::before {
@@ -885,8 +886,8 @@
       line-height: 1;
       color: rgba(37, 99, 235, 0.18);
       position: absolute;
-      top: -0.15rem;
-      left: -0.15rem;
+      top: -0.3rem;
+      left: 0;
     }
 
     .testimonial-author {
@@ -940,7 +941,6 @@
       color: var(--text-muted);
     }
 
-    /* Slider bullets */
     .testimonial-dots {
       display: flex;
       justify-content: center;
@@ -962,7 +962,6 @@
         width var(--transition-fast);
     }
 
-    /* Active slide states */
     #t-1:checked ~ .testimonial-slider .slide-1,
     #t-2:checked ~ .testimonial-slider .slide-2,
     #t-3:checked ~ .testimonial-slider .slide-3 {
@@ -1008,7 +1007,6 @@
       border-radius: 24px;
       background: #e5e7eb;
       aspect-ratio: 3 / 4;
-      /* Replace with: background-image: url('your-photo.jpg'); */
       background-position: center;
       background-size: cover;
     }
@@ -1202,19 +1200,20 @@
     }
 
     /* --------------
-       FOOTER
+       FOOTER (improved alignment + demo notice)
     -------------- */
     .footer {
       background: #020617;
       color: #e5e7eb;
       padding: 2.4rem 0 1.6rem;
+      font-size: 0.82rem;
     }
 
     .footer-inner {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr);
+      grid-template-columns: minmax(0, 1fr);
       gap: 2rem;
-      font-size: 0.8rem;
+      align-items: flex-start;
     }
 
     .footer-brand {
@@ -1263,11 +1262,11 @@
     .footer-cols {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
-      gap: 1.3rem;
+      gap: 1.6rem;
     }
 
     .footer-col-title {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #9ca3af;
@@ -1275,10 +1274,20 @@
     }
 
     .footer-hours-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 0.75rem;
+      margin-bottom: 0.15rem;
       color: #e5e7eb;
+    }
+
+    .footer-hours-row span:first-child {
+      white-space: nowrap;
+    }
+
+    .footer-hours-row span:last-child {
+      text-align: right;
+      white-space: nowrap;
     }
 
     .footer-contacts,
@@ -1326,7 +1335,7 @@
       align-items: center;
       gap: 0.8rem;
       color: #6b7280;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       flex-wrap: wrap;
     }
 
@@ -1417,7 +1426,7 @@
       }
 
       .doctor-inner {
-        direction: rtl; /* simple trick to put photo right on desktop while keeping markup order accessible */
+        direction: rtl;
       }
 
       .doctor-content {
@@ -1434,7 +1443,6 @@
 
       .footer-inner {
         grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.5fr);
-        align-items: flex-start;
       }
 
       .footer-cols {
@@ -1502,7 +1510,6 @@
         </button>
       </div>
 
-      <!-- Simple static hamburger (no JS, for future expansion) -->
       <button class="nav-toggle" type="button" aria-label="Open navigation">
         <div class="nav-toggle-lines">
           <span></span>
@@ -1760,7 +1767,7 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS (CSS SLIDER) -->
+    <!-- TESTIMONIALS -->
     <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
       <div class="shell testimonials-shell">
         <header class="section-header">
@@ -1773,7 +1780,6 @@
           </p>
         </header>
 
-        <!-- Slider radio controls -->
         <input type="radio" name="testimonial" id="t-1" checked />
         <input type="radio" name="testimonial" id="t-2" />
         <input type="radio" name="testimonial" id="t-3" />
@@ -1959,7 +1965,6 @@
         </div>
 
         <aside class="map-wrap animate-in delay-2" aria-label="Google map showing clinic location">
-          <!-- Replace src with your actual Google Maps embed URL -->
           <iframe
             class="map-embed"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.917255667916!2d-118.467!3d34.0489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sCalifornia"
@@ -2033,7 +2038,8 @@
 
       <div class="footer-bottom">
         <span>© <span id="year">2025</span> California Smile Studio. All rights reserved.</span>
-        <span>Designed for calm, clinical excellence in California.</span>
+        <span>This website is a demo created by Evida Studio for portfolio purposes only and does not represent an actual dental clinic.</span>
+        <span>Design & code by Evida Studio.</span>
       </div>
     </div>
   </footer>
