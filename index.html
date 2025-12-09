@@ -46,13 +46,9 @@
         </button>
       </div>
 
-      <!-- Static hamburger (no JS) -->
       <button class="nav-toggle" type="button" aria-label="Open navigation">
         <div class="nav-toggle-lines">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span><span></span>
         </div>
       </button>
     </div>
@@ -102,7 +98,7 @@
           </div>
         </div>
 
-        <aside class="hero-card animate-in delay-2" aria-label="Patient smile journey highlight">
+        <aside class="hero-card animate-in delay-2">
           <div class="hero-card-tagline">Real patient journey · Porcelain veneers</div>
           <div class="hero-card-row">
             <div class="hero-card-main">
@@ -287,9 +283,7 @@
                 <div class="testimonial-author">Alex R.</div>
                 <div class="testimonial-location">Downtown LA</div>
               </div>
-              <div class="testimonial-rating">
-                <span>★★★★★</span>
-              </div>
+              <div class="testimonial-rating">★★★★★</div>
             </div>
           </article>
 
@@ -304,9 +298,7 @@
                 <div class="testimonial-author">Maya L.</div>
                 <div class="testimonial-location">West Hollywood</div>
               </div>
-              <div class="testimonial-rating">
-                <span>★★★★★</span>
-              </div>
+              <div class="testimonial-rating">★★★★★</div>
             </div>
           </article>
 
@@ -320,9 +312,7 @@
                 <div class="testimonial-author">Jordan K.</div>
                 <div class="testimonial-location">Santa Monica</div>
               </div>
-              <div class="testimonial-rating">
-                <span>★★★★★</span>
-              </div>
+              <div class="testimonial-rating">★★★★★</div>
             </div>
           </article>
         </div>
@@ -437,17 +427,17 @@
             </form>
           </div>
 
-          <aside class="map-wrap animate-in delay-2" aria-label="Google map showing clinic location">
-  <div class="map-inner">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.948010879938!2d-118.4700124!3d34.0469051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4c4f4f6c0f7%3A0x0000000000000000!2sDental%20Clinic!5e0!3m2!1sen!2sus!4v0000000000000"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</aside>
+          <!-- FINAL FIXED MAP -->
+          <aside class="map-wrap animate-in delay-2">
+            <div class="map-inner">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.873677257007!2d-118.4762887237703!3d34.04855867316038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4c5b86c39e3%3A0x8d2f86a0ab593c5e!2sWilshire%20Boulevard%20Dental!5e0!3m2!1sen!2sus!4v1706800000000"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </aside>
 
         </div>
       </div>
@@ -476,22 +466,10 @@
           <div class="footer-col">
             <div class="footer-col-title">Opening hours</div>
             <div class="footer-hours">
-              <div class="footer-hours-row">
-                <span>Mon · Wed · Thu</span>
-                <span>8:30 AM – 6:00 PM</span>
-              </div>
-              <div class="footer-hours-row">
-                <span>Tue</span>
-                <span>10:00 AM – 7:30 PM</span>
-              </div>
-              <div class="footer-hours-row">
-                <span>Fri</span>
-                <span>8:30 AM – 2:00 PM</span>
-              </div>
-              <div class="footer-hours-row">
-                <span>Sat (by appointment)</span>
-                <span>9:00 AM – 1:00 PM</span>
-              </div>
+              <div class="footer-hours-row"><span>Mon · Wed · Thu</span><span>8:30 AM – 6:00 PM</span></div>
+              <div class="footer-hours-row"><span>Tue</span><span>10:00 AM – 7:30 PM</span></div>
+              <div class="footer-hours-row"><span>Fri</span><span>8:30 AM – 2:00 PM</span></div>
+              <div class="footer-hours-row"><span>Sat (by appointment)</span><span>9:00 AM – 1:00 PM</span></div>
             </div>
           </div>
 
@@ -509,9 +487,9 @@
             <div class="footer-social">
               <span>Follow our latest smile transformations.</span>
               <div class="footer-social-links">
-                <a href="#" class="social-pill" aria-label="Instagram">IG</a>
-                <a href="#" class="social-pill" aria-label="Facebook">FB</a>
-                <a href="#" class="social-pill" aria-label="TikTok">TT</a>
+                <a href="#" class="social-pill">IG</a>
+                <a href="#" class="social-pill">FB</a>
+                <a href="#" class="social-pill">TT</a>
               </div>
             </div>
           </div>
@@ -520,12 +498,11 @@
 
       <div class="footer-bottom">
         <span>© 2025 California Smile Studio. All rights reserved.</span>
-        <span>
-          This website is a demo created by Evida Studio for portfolio purposes only and does not represent an actual dental clinic.
-        </span>
+        <span>This website is a demo created by Evida Studio for portfolio purposes only.</span>
         <span>Design &amp; code by Evida Studio.</span>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
