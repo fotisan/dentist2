@@ -735,12 +735,13 @@ section {
   overflow: hidden;
 }
 
+/* εδώ μπαίνει η φωτο doctor */
 .doctor-photo-inner {
   position: absolute;
   inset: 10%;
   border-radius: 16px;
   border: 1px solid rgba(248, 250, 252, 0.12);
-  background: linear-gradient(160deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+  background: url("assetsdoctor.png") center/cover no-repeat;
 }
 
 .doctor-photo-tag {
