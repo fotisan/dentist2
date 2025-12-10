@@ -8,7 +8,10 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+...Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -40,10 +43,10 @@
           <span class="nav-pill-dot"></span>
           <span class="nav-pill-text">New patients welcome</span>
         </span>
-        <button class="btn btn-small btn-outline">
+        <button class="btn btn-small btn-outline" type="button">
           Call (310) 555-0199
         </button>
-        <button class="btn btn-small">
+        <button class="btn btn-small" type="button">
           Book consultation
           <span class="btn-icon">→</span>
         </button>
@@ -61,7 +64,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="shell hero-inner">
-        <div class="hero-copy animate-in">
+        <div class="hero-copy">
           <div class="hero-tag">
             <span class="hero-tag-dot"></span>
             Trusted cosmetic &amp; family dentistry in Los Angeles
@@ -76,11 +79,11 @@
           </p>
 
           <div class="hero-cta-row">
-            <button class="btn btn-large">
+            <button class="btn btn-large" type="button">
               Request an appointment
               <span class="btn-icon">→</span>
             </button>
-            <button class="btn btn-large btn-ghost">
+            <button class="btn btn-large btn-ghost" type="button">
               View smile gallery
             </button>
           </div>
@@ -111,7 +114,7 @@
           </div>
         </div>
 
-        <div class="hero-visual animate-in">
+        <div class="hero-visual">
           <div class="hero-card hero-card-main">
             <div class="hero-card-tag">Smile design case</div>
             <div class="hero-card-patient">Alexandra, 32 · LA</div>
@@ -210,7 +213,7 @@
                 <li>Digital X-rays (if needed)</li>
                 <li>Smile goals &amp; treatment options</li>
               </ul>
-              <button class="btn btn-full-width">
+              <button class="btn btn-full-width" type="button">
                 Schedule your first visit
                 <span class="btn-icon">→</span>
               </button>
@@ -538,6 +541,7 @@
     </div>
   </footer>
 
+  <!-- NAV SCRIPT -->
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
