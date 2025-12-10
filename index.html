@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+...Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -38,10 +38,13 @@
       <div class="nav-cta">
         <span class="nav-pill">
           <span class="nav-pill-dot"></span>
-          New patients welcome
+          <span class="nav-pill-text">New patients welcome</span>
         </span>
-        <button class="btn btn-primary btn-pill" type="button">
-          Book Consultation
+        <button class="btn btn-small btn-outline">
+          Call (310) 555-0199
+        </button>
+        <button class="btn btn-small">
+          Book consultation
           <span class="btn-icon">→</span>
         </button>
       </div>
@@ -65,195 +68,221 @@
           </div>
           <h1 class="hero-heading">
             Smile design that feels
-            <span class="hero-highlight">natural, confident,</span> and completely you.
+            <span class="hero-heading-highlight">natural, confident, and truly you.</span>
           </h1>
-          <p class="hero-sub">
-            California Smile Studio combines advanced cosmetic dentistry with a calm,
-            spa-like experience—so you can transform your smile without the stress.
+          <p class="hero-text">
+            We blend advanced cosmetic dentistry with a gentle, patient-first approach—
+            so your smile doesn’t just look amazing, it feels like it’s always belonged to you.
           </p>
 
-          <div class="hero-actions">
-            <button class="btn btn-primary btn-pill">
-              Book your free consultation
+          <div class="hero-cta-row">
+            <button class="btn btn-large">
+              Request an appointment
               <span class="btn-icon">→</span>
             </button>
-            <button class="btn btn-outline btn-pill">
+            <button class="btn btn-large btn-ghost">
               View smile gallery
             </button>
           </div>
 
           <div class="hero-meta">
             <div class="hero-meta-item">
-              <span class="hero-meta-value">4.9★</span>
-              <span>Average rating on Google</span>
+              <div class="hero-meta-label">Average rating</div>
+              <div class="hero-meta-main">
+                <span class="hero-meta-value">4.9</span>
+                <span class="hero-meta-stars">★★★★★</span>
+              </div>
+              <div class="hero-meta-sub">From 320+ Google reviews</div>
             </div>
             <div class="hero-meta-item">
-              <span class="hero-meta-value">3,200+</span>
-              <span>Smiles designed in California</span>
+              <div class="hero-meta-label">Treatment focus</div>
+              <div class="hero-meta-main">
+                <span class="hero-meta-value">Cosmetic &amp; Invisalign</span>
+              </div>
+              <div class="hero-meta-sub">With full general dentistry care</div>
             </div>
             <div class="hero-meta-item">
-              <span class="hero-meta-value">0%</span>
-              <span>Judgement. Only kind, expert care.</span>
+              <div class="hero-meta-label">Location</div>
+              <div class="hero-meta-main">
+                <span class="hero-meta-value">West Los Angeles</span>
+              </div>
+              <div class="hero-meta-sub">Easy parking &amp; evening hours</div>
             </div>
           </div>
         </div>
 
-        <aside class="hero-card animate-in delay-2">
-          <div class="hero-card-tagline">Real patient journey · Porcelain veneers</div>
-          <div class="hero-card-row">
-            <div class="hero-card-main">
-              <div class="hero-card-title">From hiding her smile to loving every photo.</div>
-              <div class="hero-card-sub">
-                We combined Invisalign, whitening, and 6 ultra-thin veneers to create a
-                balanced, natural result in under 6 months.
+        <div class="hero-visual animate-in">
+          <div class="hero-card hero-card-main">
+            <div class="hero-card-tag">Smile design case</div>
+            <div class="hero-card-patient">Alexandra, 32 · LA</div>
+            <div class="hero-card-photo-row">
+              <div class="hero-card-photo hero-card-photo-before">
+                <div class="hero-card-photo-label">Before</div>
+              </div>
+              <div class="hero-card-photo hero-card-photo-after">
+                <div class="hero-card-photo-label hero-card-photo-label-after">After</div>
               </div>
             </div>
+            <p class="hero-card-text">
+              “I went from hiding my teeth in photos to smiling in every single one. It changed how I show up in my own life.”
+            </p>
+            <div class="hero-card-meta-row">
+              <div class="hero-card-meta">
+                <div class="hero-card-meta-label">Treatment</div>
+                <div class="hero-card-meta-value">Porcelain veneers + whitening</div>
+              </div>
+              <div class="hero-card-meta">
+                <div class="hero-card-meta-label">Timeline</div>
+                <div class="hero-card-meta-value">3 visits over 6 weeks</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card hero-card-floating hero-card-floating-top">
+            <div class="hero-card-icon">💬</div>
+            <div class="hero-card-title">“So gentle &amp; reassuring”</div>
+            <div class="hero-card-sub">
+              “They explained every step before it happened. No surprises, no judgment—just real care.”
+            </div>
+          </div>
+
+          <div class="hero-card hero-card-floating hero-card-floating-bottom">
             <div class="hero-card-score">
               <div class="hero-card-score-label">Confidence score</div>
               <div class="hero-card-score-value">+87%</div>
             </div>
-          </div>
-
-          <div class="hero-progress">
-            <div>
-              <div class="hero-progress-item">
-                <span>Smile symmetry</span>
-                <span>92%</span>
-              </div>
-              <div class="hero-progress-bar">
-                <div class="hero-progress-fill" style="width: 92%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="hero-progress-item">
-                <span>Whitening shade</span>
-                <span>3× brighter</span>
-              </div>
-              <div class="hero-progress-bar">
-                <div class="hero-progress-fill" style="width: 80%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="hero-progress-item">
-                <span>Patient-reported confidence</span>
-                <span>“Life-changing”</span>
-              </div>
-              <div class="hero-progress-bar">
-                <div class="hero-progress-fill" style="width: 95%"></div>
-              </div>
+            <div class="hero-card-sub">
+              Patients report feeling significantly more confident in both photos and in-person.
             </div>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="shell">
-        <header class="section-header animate-in">
-          <div class="section-kicker">About the studio</div>
-          <h2 class="section-title">A calm, modern clinic built around your comfort.</h2>
-          <p class="section-sub">
-            From the scent in the room to the music in your headphones, every detail at
-            California Smile Studio is designed to help you feel relaxed, informed, and cared
-            for—never rushed.
-          </p>
-        </header>
-
-        <div class="about-grid">
-          <article class="about-card animate-in delay-1">
-            <p>
-              We know most people don’t exactly <em>love</em> going to the dentist. That’s why
-              we’ve built a boutique practice focused on transparency, communication, and
-              comfort. You’ll always know what we’re doing, why we’re doing it, and what it
-              will cost—before we begin.
+    <section id="about" class="section section-about">
+      <div class="shell section-inner section-split">
+        <div class="section-label">About the clinic</div>
+        <div class="section-main">
+          <div class="section-copy">
+            <h2 class="section-heading">
+              Dentistry built around calm, comfort, and clear communication.
+            </h2>
+            <p class="section-text">
+              At California Smile Studio, we believe that feeling at ease in the chair is just as important
+              as the technical dentistry. From the way we greet you, to the way we explain your options, you’ll
+              always know what’s happening and why.
             </p>
-            <p>
-              Whether you’re here for a subtle refresh or a full smile makeover, we use
-              digital planning and minimally invasive techniques to create results that fit
-              your face, personality, and lifestyle.
+            <p class="section-text">
+              No rushed appointments. No confusing treatment plans. Just a calm, modern space where you’re listened to,
+              never judged, and always treated like a real person before a patient.
             </p>
 
-            <div class="stat-badges">
-              <div class="stat-badge">
-                <span class="stat-badge-label">Cosmetic &amp; restorative focus</span>
-                <span class="stat-badge-value">Invisalign · Veneers · Implants</span>
+            <div class="about-grid">
+              <div class="about-item">
+                <div class="about-label">Modern technology</div>
+                <div class="about-value">Digital scans, 3D imaging &amp; Invisalign</div>
               </div>
-              <div class="stat-badge">
-                <span class="stat-badge-label">Comfort-first experience</span>
-                <span class="stat-badge-value">Noise-cancelling · Netflix · Warm blankets</span>
+              <div class="about-item">
+                <div class="about-label">Comfort-first design</div>
+                <div class="about-value">Noise-cancelling headphones, Netflix &amp; blankets</div>
               </div>
-            </div>
-          </article>
-
-          <div class="about-grid-secondary animate-in delay-2">
-            <div>
-              <strong>Modern technology, gentle approach.</strong> 3D scanning, digital smile
-              design, and low-radiation imaging mean fewer surprises and more comfortable
-              visits.
-            </div>
-            <div>
-              <strong>Flexible scheduling.</strong> Early-morning and evening appointments
-              designed around busy Los Angeles schedules.
-            </div>
-            <div>
-              <strong>Transparent pricing.</strong> You’ll receive a clear treatment roadmap
-              and investment breakdown before we begin any cosmetic work.
+              <div class="about-item">
+                <div class="about-label">Transparent pricing</div>
+                <div class="about-value">Clear estimates before any treatment</div>
+              </div>
+              <div class="about-item">
+                <div class="about-label">Flexible scheduling</div>
+                <div class="about-value">Early mornings &amp; select Saturdays</div>
+              </div>
             </div>
           </div>
+
+          <aside class="about-aside">
+            <div class="about-aside-card">
+              <div class="about-aside-title">New to our clinic?</div>
+              <p class="about-aside-text">
+                We start every journey with a comprehensive exam, digital scan, and a relaxed conversation
+                about your goals—no pressure, no obligation.
+              </p>
+              <ul class="about-list">
+                <li>Full oral health exam</li>
+                <li>Digital X-rays (if needed)</li>
+                <li>Smile goals &amp; treatment options</li>
+              </ul>
+              <button class="btn btn-full-width">
+                Schedule your first visit
+                <span class="btn-icon">→</span>
+              </button>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="section">
-      <div class="shell">
-        <header class="section-header animate-in">
+    <section id="services" class="section section-services">
+      <div class="shell section-inner">
+        <div class="section-header">
           <div class="section-kicker">Treatments</div>
-          <h2 class="section-title">Everything you need for a confident, healthy smile.</h2>
-          <p class="section-sub">
-            Comprehensive care under one roof—from preventive checkups to full cosmetic
-            makeovers.
+          <h2 class="section-heading">
+            From subtle enhancements to full smile transformations.
+          </h2>
+          <p class="section-text section-text-narrow">
+            Every smile is unique. We design treatment plans that match your goals, budget, and timeline—
+            whether you’re looking for a small refresh or a complete makeover.
           </p>
-        </header>
+        </div>
 
         <div class="services-grid">
-          <article class="service-card animate-in delay-1">
-            <div class="service-label">Cosmetic dentistry</div>
-            <h3 class="service-title">Porcelain veneers &amp; smile makeovers</h3>
-            <p class="service-desc">
-              Ultra-thin veneers designed to correct discoloration, spacing, and shape while
-              keeping your smile looking like you—only brighter.
+          <article class="service-card">
+            <div class="service-icon">✨</div>
+            <h3 class="service-title">Cosmetic Dentistry</h3>
+            <p class="service-text">
+              Veneers, bonding, and whitening for a brighter, more balanced smile that still looks like you.
             </p>
+            <ul class="service-list">
+              <li>Porcelain &amp; minimal-prep veneers</li>
+              <li>Professional whitening (in-office &amp; at-home)</li>
+              <li>Smile symmetry &amp; tooth reshaping</li>
+            </ul>
             <div class="service-meta">
-              <span class="service-pill">Digital smile design included</span>
-              <span>Typical timeline: 2–3 visits</span>
+              <span class="service-meta-label">Typical timeline</span>
+              <span class="service-meta-value">2–4 visits</span>
             </div>
           </article>
 
-          <article class="service-card animate-in delay-2">
-            <div class="service-label">Orthodontics</div>
-            <h3 class="service-title">Invisalign clear aligners</h3>
-            <p class="service-desc">
-              Discreet, removable aligners to gently guide your teeth into place—without metal
-              brackets or wires.
+          <article class="service-card">
+            <div class="service-icon">🦷</div>
+            <h3 class="service-title">Invisalign &amp; Alignment</h3>
+            <p class="service-text">
+              Clear aligners that discreetly straighten your teeth with minimal disruption to your daily life.
             </p>
+            <ul class="service-list">
+              <li>Full Invisalign cases</li>
+              <li>Minor cosmetic alignment</li>
+              <li>Retainers &amp; smile maintenance</li>
+            </ul>
             <div class="service-meta">
-              <span class="service-pill">0% financing available</span>
-              <span>As little as 6 months</span>
+              <span class="service-meta-label">Typical timeline</span>
+              <span class="service-meta-value">6–18 months</span>
             </div>
           </article>
 
-          <article class="service-card animate-in delay-3">
-            <div class="service-label">Whitening &amp; wellness</div>
-            <h3 class="service-title">Professional whitening &amp; preventive care</h3>
-            <p class="service-desc">
-              In-office and take-home whitening options, combined with comprehensive checkups,
-              cleanings, and gum health.
+          <article class="service-card">
+            <div class="service-icon">🌿</div>
+            <h3 class="service-title">General &amp; Family Care</h3>
+            <p class="service-text">
+              Preventive and restorative treatments to keep your smile healthy at every stage of life.
             </p>
+            <ul class="service-list">
+              <li>Cleanings &amp; check-ups</li>
+              <li>Tooth-colored fillings &amp; crowns</li>
+              <li>Gentle care for anxious patients</li>
+            </ul>
             <div class="service-meta">
-              <span class="service-pill">Sensitivity-minimizing formulas</span>
-              <span>Results in 1 visit</span>
+              <span class="service-meta-label">For the whole family</span>
+              <span class="service-meta-value">Ages 12+</span>
             </div>
           </article>
         </div>
@@ -261,58 +290,62 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section">
-      <div class="shell">
-        <header class="section-header animate-in">
+    <section id="testimonials" class="section section-testimonials">
+      <div class="shell section-inner">
+        <div class="section-header">
           <div class="section-kicker">Patient stories</div>
-          <h2 class="section-title">“I finally feel like myself when I smile.”</h2>
-          <p class="section-sub">
-            Real words from people who were once nervous to book that first appointment.
+          <h2 class="section-heading">
+            “I didn’t just get a new smile. I got my confidence back.”
+          </h2>
+          <p class="section-text section-text-narrow">
+            Real words from patients who once felt nervous—even terrified—about the dentist.
+            Today, they’re the ones telling their friends to finally book that appointment.
           </p>
-        </header>
+        </div>
 
         <div class="testimonials-grid">
-          <article class="testimonial-card animate-in delay-1">
-            <p>
-              “I avoided photos for years because I hated my teeth. Dr. Martinez walked me
-              through every step, showed me a digital preview, and the final result was even
-              better than I expected.”
+          <article class="testimonial-card">
+            <div class="testimonial-tag">Cosmetic makeover</div>
+            <p class="testimonial-quote">
+              “I used to plan my smiles around hiding my teeth. Now I catch myself smiling in shop windows
+              and actually liking what I see.”
             </p>
-            <div class="testimonial-meta">
+            <div class="testimonial-author">
+              <div class="testimonial-avatar testimonial-avatar-a"></div>
               <div>
-                <div class="testimonial-author">Alex R.</div>
-                <div class="testimonial-location">Downtown LA</div>
+                <div class="testimonial-name">Alexandra M.</div>
+                <div class="testimonial-detail">Porcelain veneers · 3 visits</div>
               </div>
-              <div class="testimonial-rating">★★★★★</div>
             </div>
           </article>
 
-          <article class="testimonial-card animate-in delay-2">
-            <p>
-              “The team is so kind and patient. I have dental anxiety and they never made me
-              feel rushed. Noise-cancelling headphones and a warm blanket made all the
-              difference.”
+          <article class="testimonial-card">
+            <div class="testimonial-tag">Invisalign journey</div>
+            <p class="testimonial-quote">
+              “I was worried about looking ‘braced’ in meetings. The aligners were so discreet that most
+              people never noticed—until they saw the final result.”
             </p>
-            <div class="testimonial-meta">
+            <div class="testimonial-author">
+              <div class="testimonial-avatar testimonial-avatar-b"></div>
               <div>
-                <div class="testimonial-author">Maya L.</div>
-                <div class="testimonial-location">West Hollywood</div>
+                <div class="testimonial-name">Jordan P.</div>
+                <div class="testimonial-detail">Invisalign · 14 months</div>
               </div>
-              <div class="testimonial-rating">★★★★★</div>
             </div>
           </article>
 
-          <article class="testimonial-card animate-in delay-3">
-            <p>
-              “From Invisalign to whitening and bonding, they created a plan that fit my
-              budget and my timeline. I get compliments on my smile every week.”
+          <article class="testimonial-card">
+            <div class="testimonial-tag">Dental anxiety</div>
+            <p class="testimonial-quote">
+              “They never made me feel ashamed for avoiding the dentist. We went at my pace, and now I’m
+              actually proud of my checkups.”
             </p>
-            <div class="testimonial-meta">
+            <div class="testimonial-author">
+              <div class="testimonial-avatar testimonial-avatar-c"></div>
               <div>
-                <div class="testimonial-author">Jordan K.</div>
-                <div class="testimonial-location">Santa Monica</div>
+                <div class="testimonial-name">Sofia L.</div>
+                <div class="testimonial-detail">Restorative care · Ongoing</div>
               </div>
-              <div class="testimonial-rating">★★★★★</div>
             </div>
           </article>
         </div>
@@ -320,125 +353,128 @@
     </section>
 
     <!-- DOCTOR -->
-    <section id="doctor" class="section">
-      <div class="shell">
-        <header class="section-header animate-in">
-          <div class="section-kicker">Meet your dentist</div>
-          <h2 class="section-title">Dr. Elena Martinez, DDS</h2>
-          <p class="section-sub">
-            Combining an artist’s eye for detail with a gentle, supportive chairside manner.
-          </p>
-        </header>
+    <section id="doctor" class="section section-doctor">
+      <div class="shell section-inner section-split section-split-reverse">
+        <div class="section-label">Meet your doctor</div>
+        <div class="section-main">
+          <div class="section-copy">
+            <h2 class="section-heading">
+              Dr. Elena Rivera, DDS
+            </h2>
+            <p class="section-text">
+              Dr. Rivera is a Los Angeles–trained cosmetic and family dentist known for her meticulous eye
+              and calm, grounded bedside manner. She believes great dentistry happens when patients feel safe,
+              informed, and genuinely cared for.
+            </p>
+            <p class="section-text">
+              With advanced training in cosmetic dentistry and Invisalign, she focuses on creating outcomes that
+              look beautiful in photos—and completely natural in real life.
+            </p>
 
-        <div class="doctor-grid">
-          <div class="doctor-card animate-in delay-1">
-            <div class="doctor-photo-placeholder">
-              <div class="doctor-photo-inner"></div>
-              <div class="doctor-photo-tag">
-                <span>Accredited cosmetic dentist</span>
-                <span>10+ years experience</span>
+            <div class="doctor-grid">
+              <div class="doctor-item">
+                <div class="doctor-label">Education</div>
+                <div class="doctor-value">DDS, UCLA School of Dentistry</div>
+              </div>
+              <div class="doctor-item">
+                <div class="doctor-label">Special training</div>
+                <div class="doctor-value">Advanced cosmetic &amp; Invisalign certifications</div>
+              </div>
+              <div class="doctor-item">
+                <div class="doctor-label">Experience</div>
+                <div class="doctor-value">10+ years in private practice</div>
+              </div>
+              <div class="doctor-item">
+                <div class="doctor-label">Approach</div>
+                <div class="doctor-value">Gentle, detail-oriented &amp; judgment-free</div>
               </div>
             </div>
           </div>
 
-          <div class="doctor-copy animate-in delay-2">
-            <p>
-              Dr. Martinez completed her Doctor of Dental Surgery at UCLA School of Dentistry
-              and has completed advanced training in cosmetic dentistry, digital smile design,
-              and Invisalign.
-            </p>
-            <p>
-              She believes great dentistry is collaborative—she’ll walk you through your
-              options, answer every question, and design a treatment plan that fits your life.
-            </p>
-
-            <div class="doctor-meta">
-              <div class="doctor-meta-item">
-                <span class="doctor-meta-dot"></span>
-                <span>Member, American Academy of Cosmetic Dentistry</span>
-              </div>
-              <div class="doctor-meta-item">
-                <span class="doctor-meta-dot"></span>
-                <span>Invisalign® Silver Provider</span>
-              </div>
-              <div class="doctor-meta-item">
-                <span class="doctor-meta-dot"></span>
-                <span>Serving patients from across Los Angeles, CA</span>
-              </div>
+          <aside class="doctor-aside">
+            <div class="doctor-photo"></div>
+            <div class="doctor-badge">
+              <div class="doctor-badge-main">American Dental Association</div>
+              <div class="doctor-badge-sub">Active member</div>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="shell">
-        <header class="section-header animate-in">
-          <div class="section-kicker">Contact</div>
-          <h2 class="section-title">Ready to plan your new smile?</h2>
-          <p class="section-sub">
-            Share a few details and our team will reach out within one business day to
-            schedule your visit.
-          </p>
-        </header>
+    <section id="contact" class="section section-contact">
+      <div class="shell section-inner section-split">
+        <div class="section-label">Contact &amp; hours</div>
+        <div class="section-main">
+          <div class="section-copy">
+            <h2 class="section-heading">
+              Ready to feel genuinely good about your smile?
+            </h2>
+            <p class="section-text">
+              Share a bit about what you’re hoping to improve, and our team will follow up within one business day
+              to help you schedule, verify insurance, and answer any questions.
+            </p>
 
-        <div class="contact-grid">
-          <div class="contact-card animate-in delay-1">
-            <form>
-              <div class="contact-row">
-                <label for="name">Full name</label>
-                <input id="name" name="name" type="text" placeholder="Sarah Johnson" />
+            <div class="contact-grid">
+              <div class="contact-item">
+                <div class="contact-label">Call or text</div>
+                <div class="contact-value">(310) 555-0199</div>
+                <div class="contact-sub">Mon–Thu · 8:00am–6:00pm</div>
               </div>
-              <div class="contact-row">
-                <label for="email">Email address</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" />
+              <div class="contact-item">
+                <div class="contact-label">Location</div>
+                <div class="contact-value">1234 Wilshire Blvd, Suite 500</div>
+                <div class="contact-sub">West Los Angeles, CA 90025</div>
               </div>
-              <div class="contact-row">
-                <label for="phone">Phone number</label>
-                <input id="phone" name="phone" type="tel" placeholder="(310) 555-0192" />
+              <div class="contact-item">
+                <div class="contact-label">Parking</div>
+                <div class="contact-value">On-site garage &amp; validation</div>
+                <div class="contact-sub">Easy access from the 405 &amp; 10</div>
               </div>
-              <div class="contact-row">
-                <label for="message">How can we help?</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell us about your goals—whitening, Invisalign, veneers, or a full smile makeover."
-                ></textarea>
-              </div>
-
-              <button class="btn btn-primary btn-pill" type="submit">
-                Request my consultation
-                <span class="btn-icon">→</span>
-              </button>
-
-              <p class="form-footnote">
-                By submitting, you agree to be contacted by California Smile Studio via phone,
-                text, or email. We never share your information.
-              </p>
-
-              <div class="contact-meta">
-                <div><strong>Phone:</strong> (310) 555-0192</div>
-                <div><strong>Email:</strong> hello@californiasmilestudio.com</div>
-                <div>
-                  <strong>Address:</strong> 1234 Wilshire Blvd, Suite 500, Los Angeles, CA 90025
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
 
-          <!-- FINAL FIXED MAP -->
-          <aside class="map-wrap animate-in delay-2">
-            <div class="map-inner">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.873677257007!2d-118.4762887237703!3d34.04855867316038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4c5b86c39e3%3A0x8d2f86a0ab593c5e!2sWilshire%20Boulevard%20Dental!5e0!3m2!1sen!2sus!4v1706800000000"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
+          <aside class="contact-aside">
+            <form class="contact-form">
+              <div class="contact-form-row">
+                <div class="field">
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="name" placeholder="Alexandra Miller" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" />
+                </div>
+              </div>
+              <div class="contact-form-row">
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(310) 555-0199" />
+                </div>
+                <div class="field">
+                  <label for="interest">What are you interested in?</label>
+                  <select id="interest" name="interest">
+                    <option>Cosmetic consultation</option>
+                    <option>Invisalign</option>
+                    <option>General &amp; family care</option>
+                    <option>Second opinion</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="message">Tell us a bit about your smile goals</label>
+                <textarea id="message" name="message" rows="4" placeholder="I’d love to feel more confident smiling in photos, and I’m curious what my options might be."></textarea>
+              </div>
+              <button type="submit" class="btn btn-full-width">
+                Submit &amp; request an appointment
+                <span class="btn-icon">→</span>
+              </button>
+              <p class="contact-note">
+                We’ll never share your information. A real human from our team will reply within one business day.
+              </p>
+            </form>
           </aside>
-
         </div>
       </div>
     </section>
@@ -446,63 +482,93 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="shell">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="footer-logo-badge">
-              <div class="footer-logo-inner">C</div>
-            </div>
-            <div>
-              <div class="footer-title">California Smile Studio</div>
-              <div class="footer-sub">
-                Modern cosmetic &amp; family dentistry in Los Angeles, CA.
-              </div>
-            </div>
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-inner">C</div>
+        </div>
+        <div>
+          <div class="footer-title">California Smile Studio</div>
+          <div class="footer-subtitle">Modern cosmetic &amp; family dentistry in West LA.</div>
+          <div class="footer-demo-note">
+            This website is a demo project for a web design portfolio and does not represent an actual dental clinic.
           </div>
         </div>
+      </div>
 
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col-title">Opening hours</div>
-            <div class="footer-hours">
-              <div class="footer-hours-row"><span>Mon · Wed · Thu</span><span>8:30 AM – 6:00 PM</span></div>
-              <div class="footer-hours-row"><span>Tue</span><span>10:00 AM – 7:30 PM</span></div>
-              <div class="footer-hours-row"><span>Fri</span><span>8:30 AM – 2:00 PM</span></div>
-              <div class="footer-hours-row"><span>Sat (by appointment)</span><span>9:00 AM – 1:00 PM</span></div>
-            </div>
-          </div>
-
-          <div class="footer-col">
-            <div class="footer-col-title">Contact</div>
-            <div class="footer-contacts">
-              <span>(310) 555-0192</span>
-              <span>hello@californiasmilestudio.com</span>
-              <span>1234 Wilshire Blvd, Suite 500<br />Los Angeles, CA 90025</span>
-            </div>
-          </div>
-
-          <div class="footer-col">
-            <div class="footer-col-title">Connect</div>
-            <div class="footer-social">
-              <span>Follow our latest smile transformations.</span>
-              <div class="footer-social-links">
-                <a href="#" class="social-pill">IG</a>
-                <a href="#" class="social-pill">FB</a>
-                <a href="#" class="social-pill">TT</a>
-              </div>
-            </div>
-          </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <div class="footer-heading">Hours</div>
+          <ul class="footer-list">
+            <li>Mon–Thu: 8:00am – 6:00pm</li>
+            <li>Fri: 8:00am – 2:00pm</li>
+            <li>Sat &amp; Sun: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-list">
+            <li>(310) 555-0199</li>
+            <li>smile@californiasmilestudio.com</li>
+            <li>1234 Wilshire Blvd, Suite 500</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-list footer-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Treatments</a></li>
+            <li><a href="#testimonials">Stories</a></li>
+            <li><a href="#doctor">Doctor</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© 2025 California Smile Studio. All rights reserved.</span>
-        <span>This website is a demo created by Evida Studio for portfolio purposes only.</span>
-        <span>Design &amp; code by Evida Studio.</span>
+        <div class="footer-copy">
+          © 2025 California Smile Studio · Demo website by Evida Studio.
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <span>·</span>
+          <a href="#">Terms</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      navLinks.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          body.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!body.classList.contains('nav-open')) return;
+
+        const clickInsideNav =
+          e.target.closest('.nav') || e.target.closest('.nav-toggle');
+
+        if (!clickInsideNav) {
+          body.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
